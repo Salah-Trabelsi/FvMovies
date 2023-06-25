@@ -10,10 +10,10 @@
             </div>
             <div class="flex-nowrap">
                 <router-link :to="{name: 'edit-post', params: {id: post._id}}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-                    update
+                    bearbeiten
                 </router-link>
                 <button @click="removePost(post._id)" class="mr-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
-                    delete
+                    löschen
                 </button>
             </div>
 

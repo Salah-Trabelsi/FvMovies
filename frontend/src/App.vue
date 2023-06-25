@@ -5,8 +5,9 @@
     <SideBar ref="sideBar" />
     <div class="p-0 sm:p-0 md:p-4 lg:p-4 sm:ml-64">
       <router-view  />
+      <Footer />
     </div>
-    <Footer />
+    
 
   </main>
   

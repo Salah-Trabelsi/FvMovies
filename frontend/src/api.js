@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backendBaseUrl = 'http://localhost:3000'; 
+const backendBaseUrl = 'https://favorite-movies-g64v.onrender.com'; 
 const apiUrl = `${backendBaseUrl}/api/post`;
 
 export default class API {
@@ -42,13 +42,6 @@ export default class API {
   }
 
 
-  // static async updatePost(id, post, config) {
-  //   return axios.patch(`${apiUrl}/${id}`, post, config);
-  // }
-  
-  
-  
-  
   // delete post
   static async deletePost(id, post) {
 

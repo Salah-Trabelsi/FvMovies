@@ -2,7 +2,7 @@
     <div>
         <div class="w-full">
             <form @submit.prevent="updateForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <h1 class="text-3xl mb-5">Edit this Post</h1>
+                <h1 class="text-3xl mb-5">Filme bearbeiten</h1>
                 <div class="mb-7">
                     <div class="relative mr-3 border-b border-gray-400">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -42,7 +42,7 @@
     
                 <div class="flex items-center justify-between">
                 <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                    editieren
+                    Bearbeiten 
                 </button>
             
                 </div>
@@ -76,7 +76,7 @@ import API from "../api"
             this.post.title = response.title;
             this.post.category = response.category;
             this.post.content = response.content;
-            this.post.image = response.image; // Set image directly without appending timestamp
+            this.post.image = response.image; 
             this.post.old_image = response.image;
         },
 

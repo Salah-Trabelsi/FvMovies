@@ -32,7 +32,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg class="w-7 h-7 text-gray-800 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g transform="rotate(-90 8 8)"><g fill="currentColor"><path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/><path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/></g></g></svg>
                         </div> 
-                        <input ref="fileInput" @change="selectFile" class="appearance-none pl-10 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" id="username" type="file" placeholder="Category">
+                        <input ref="fileInput" @change="selectFile" class="appearance-none pl-10 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" id="username" type="file" placeholder="Category" required>
                     </div>
                 </div>
     
@@ -84,7 +84,7 @@ import API from "../api"
                 formData.append('title', this.post.title);
                 formData.append('category', this.post.category);
                 formData.append('content', this.post.content);
-                formData.append('image', this.$refs.fileInput.files[0]); // Get the selected file from the input field
+                formData.append('image', this.$refs.fileInput.files[0]); 
 
                 try {
                     const response = await API.addPost(formData);
